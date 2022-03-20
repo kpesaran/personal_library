@@ -1,0 +1,26 @@
+.book-entry {
+    border: 1px black double;
+    width: 300px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.label-input,form button {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+input {
+    width: 200px;
+}
+
+.card {
+    width: 350px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding: 20px;
+}
