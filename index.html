@@ -11,6 +11,7 @@
 <body>
     <div class="entire-container">
         <h1>Book Library App</h1>
+        <button id=add-btn> NEW BOOK</button>
         <div class="book-entry">
             <form action="" id="form1" method="push">
                 <div class="label-input">
@@ -26,8 +27,9 @@
                     <input type="number" name="pages" id="pages">
                 </div>
                 <div class="label-input">
-                    <label for="read">DID YOU READ IT?</label>
-                    <input type="checkbox"  name="read" id="read">
+                    <label class = 'switch' for="read">DID YOU READ IT?</label>
+                        <input type="checkbox"  name="read" id="read">
+                        <span class ='slider round'></span>
                 </div>
                 <button type="button" form="form1" value="submit" id='submit'>SUBMIT</button>
             </form>

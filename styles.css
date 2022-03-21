@@ -25,28 +25,39 @@ h1 {
 
 
 .book-entry {
+    display: none;
     border: 1px black double;
     text-align: center;
-    height: 85vh;
+    height: 100vh;
+    width: 100vw;
+    z-index:999;
+    position: fixed;
+    left: 0;
+    top: 0;
     margin-bottom: 20px;
-    grid-column: 1/2;
-    grid-template-columns: 4fr;
     padding-top: 3px;
     box-sizing: border-box;
-    background-color: var(--dark-color);
-    border: 0px
+    background-color: rgba(245, 245, 245, 0.632);
+    backdrop-filter: blur(3px);
+    border: 0px;
+    justify-content: center;
+    text-align: center;
 
 }
 
 form {
-    grid-column: 1/2;
     display: grid;
-    gap: 40px;
-    padding: 15px;
-    justify-content: center;
-    align-items: center;
-    padding-top: 80px;
-    
+    /* padding: 15px; */
+    align-items: stretch;
+    gap:5px;
+    align-content: center;
+    justify-content: space-around;
+    justify-items: end;  
+    margin-top: 25%;
+    margin-bottom: 25%;
+    background: var(--darkest-color);
+}
+
 }
 
 #submit {
@@ -62,15 +73,15 @@ form {
 
 input {
     width: 150px;
-    height: fit-content;
+    
 }
 
 .card {
     width: 200px;
     box-sizing: border-box;
     padding: 20px;
-    background-color: var(--lightest-color);
-    border-radius: 10px;
+    background: var(--lightest-color);
+    background: linear-gradient(45deg, rgb(234 232 211),rgb(93 93 84));
     margin: 10px;
     height: 300;
     

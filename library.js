@@ -2,6 +2,17 @@ let myLibrary = [];
 
 
 let submit_button = document.getElementById('submit');
+let add_button = document.getElementById('add-btn')
+let book_entry = document.querySelector('.book-entry')
+
+add_button.addEventListener('click', (e) => {
+    
+    book_entry.style.display = 'flex';
+})
+
+function form_display() {
+    book_entry.style.display = 'flex'
+}
 
 submit_button.addEventListener('click', addBooktoLibrary);
 
@@ -42,6 +53,7 @@ function addBooktoLibrary() {
         })
 
         console.log(myLibrary);
+        book_entry.style.display='none'
         return display_card();
     }
 }
@@ -61,9 +73,11 @@ function display_card() {
             let book_pages = document.createElement('p');
             let book_read = document.createElement('p');
             let book_remove = document.createElement('button');
+            let book_toggle = document.createElement('button')
             
             book_remove.classList.toggle('delete-btn')
             book_remove.textContent = 'REMOVE'
+            book_toggle.textContent = 'Read'
             book_card.classList.toggle('card');
             
         
@@ -82,6 +96,7 @@ function display_card() {
             book_card.appendChild(book_pages);
             book_card.appendChild(book_read);
             book_card.appendChild(book_remove);
+            book_card.appendChild(book_toggle)
             
 
             book_counter = book_counter + 1
@@ -92,6 +107,20 @@ function display_card() {
                     this.closest('div').remove();
                     myLibrary.pop(this)
                 });
+            
+            book_toggle.addEventListener('click', () => {
+                if (book_element.read === true) {
+                    book_element.read = false
+                    book_read.textContent = "You haven't read this book yet";
+                    console.log(myLibrary)
+                }
+                else if (book_element.read === false) {
+                    book_element.read = true
+                    book_read.textContent = "You've read this book"
+                    console.log(myLibrary)
+                }
+            }
+            )
 }
 })
 }
