@@ -16,12 +16,16 @@ function form_display() {
 
 submit_button.addEventListener('click', addBooktoLibrary);
 
-function book_add(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.info = function() {
+class book_add {
+    constructor(title, author, pages, read) {
+
+    
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+    info() {
         if (read === false) {
             return `${title} by ${author}, ${pages} pages, not read yet`;
     }
