@@ -17,8 +17,8 @@ function form_display() {
 submit_button.addEventListener('click', addBooktoLibrary);
 
 function book_add(title, author, pages, read) {
-    this.title = title
-    this.author = author;;
+    this.title = title;
+    this.author = author;
     this.pages = pages;
     this.read = read;
     this.info = function() {
@@ -33,6 +33,7 @@ function book_add(title, author, pages, read) {
 
 
 function addBooktoLibrary() {
+    //grab's values entered into the form and creates a new object.
     let title = document.getElementById('title').value;
     let author = document.getElementById('author').value;
     let pages = document.getElementById('pages').value;
@@ -66,6 +67,7 @@ let book_counter = 0;
 function display_card() {
     myLibrary.forEach(book_element => {
         console.log(book_element.name)
+        console.log(myLibrary)
         if (myLibrary.indexOf(book_element) === myLibrary.length - 1) {
             let book_card = document.createElement('div');
             let book_title = document.createElement('p');
